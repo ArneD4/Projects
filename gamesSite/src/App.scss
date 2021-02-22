@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+$color1 : rgb(122, 202, 165);
+$color2 : rgb(47, 47, 47);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka One', cursive;
+}
+
+
+/*LOGIN SIGN IN*/
+button {
+  border: none;
+  outline: none;
+  background: $color1;
+  color:$color2;
+  float:right;
+  margin-bottom: 2rem!important;
+  border-radius: 2rem!important;
+  border: 0!important;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1rem;
+  background: #e9e9e9;
+  display: flex;
+}
+
+.login .loginContainer {
+  padding: 5rem;
+  margin: auto;
+  width: 100%;
+  max-width: 520px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 2rem;
+  -moz-box-shadow: 3rem 3rem 3rem $color2;
+	-webkit-box-shadow: 3rem 3rem 3rem $color2;
+	box-shadow: 3rem 3rem 3rem $color2;
+  h1{
+    color:$color1;
+    font-size: 3rem;
+    padding:2rem 0 ;
+  }
+}
+
+
+.login .loginContainer input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 1rem ;
+  background-color: rgba(214, 214, 214, 0.335);
+  color: $color2;
+  letter-spacing: 0.3rem;
+  border-radius: 2rem;
+  margin: 1rem 0;
+}
+
+.login .loginContainer .btnContainer {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.login .loginContainer .btnContainer p {
+  margin: 14px 0 0 0;
+  text-align: right;
+  color: $color2;
+}
+
+.login .loginContainer .btnContainer p span {
+  color: $color1;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.login .loginContainer .btnContainer p span:hover {
+  color: red;
+}
+
+.login .loginContainer .errorMsg {
+  color: red;
+  font-size: 16px;
+}
+
+
+/*HEROPAGE*/
+.hero {
+  width: 100%;
+  bottom: 0;
+  background: $color1;
+  background: linear-gradient(168deg, r$color1 0%, rgba(201,161,65,1) 97%);
+}
+
+.hero nav {
+  background: $color1;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.287));
+}
+
+.hero nav h2 {
+  color: #fff;
+}
+
+.hero nav button {
+  width: 86px;
+  padding: 8px 0;
+  background: $color1;
+}
+
+/*DICEGAME*/
+
+.dicegame{
+  padding-top: 6rem;
+  max-width: 60vw;
+  margin: auto;
+  h1{
+    color: rgba(122, 202, 165, 0.486);
+    text-align: left!important;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1rem;
+    text-transform: uppercase;
+  }
+  h5{
+    padding-left: 1rem;
+    text-transform: uppercase;
+    font-size: clamp(0.3rem, 5vw, 1rem);
+  }
+  h2,h3,h4,h5{
+    font-family: 'Varela Round', sans-serif;
+    text-align: left;
+  }
+}
+
+ .left{
+  text-align: center;
+
+  .dicespan{
+    padding: 4rem 0;
+    display: flex;
+  } 
+  .dice{
+    margin: auto!important;
+    h4{
+      text-align: center;
+    }
+  }
+}
+
+.score{
+  margin-left: 3rem;
+  margin: 0;
+  .result{
+    padding-top: 4rem;
+  }
+  button {
+    float:none;
+    margin-bottom: 0!important;
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.287));
+  }
+  .StarRatings{
+    padding-left: 1rem;
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.287));
+    path{
+      filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.287));
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+///JUMPGAME
+.jumpgame{
+  padding-top: 6rem;
+  max-width: 60vw;
+  margin: auto;
+  text-align: center;
+  
+  button{
+    float: none;
+    margin-top: 2rem;
+    max-width: 12vw;
+  }
+  h1{
+    color: rgba(122, 202, 165, 0.486);
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 700;
+    line-height: 1rem;
+    text-transform: uppercase;
+  }
+  h5{
+    padding-left: 1rem;
+    text-transform: uppercase;
+    font-size: clamp(0.3rem, 5vw, 1rem);
+  }
+  h2,h3,h4,h5{
+    font-family: 'Varela Round', sans-serif;
+
+  }
+}
+#game{
+  margin-top: 3rem!important;
+  margin: auto;
+  width: 500px;
+  height: 200px;
+  border-bottom: 1px solid $color1;
+  
+  
+}
+#character{
+  width: 20px;
+  height: 50px;
+  background-color: $color1;
+  position: relative;
+  top: 150px;}
+  .animate{
+      animation: jump 500ms;
+    }
+
+@keyframes jump{
+  0%{top: 150px;}
+  30%{top: 100px;}
+  70%{top: 100px;}
+  100%{top: 150px;}
+}
+#block{
+  width: 20px;
+  height: 20px;
+  background-color: $color2;
+  position: relative;
+  top: 130px;
+  left: 480px;
+  animation:none;
+}
+@keyframes block{
+  0%{left:480px;}
+  100%{left:-40px};
+}
+
+
+
+
+
+///SNAKE GAME
+
+.snakegame{
+  padding-top: 6rem;
+  max-width: 60vw;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 2rem;;
+  #warning{
+    display: none;
+  }
+  button{
+    float: none;
+    margin-top: 2rem;
+    max-width: 12vw;
+  }
+  h1{
+    color: rgba(122, 202, 165, 0.486);
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 700;
+
+    text-transform: uppercase;
+  }
+  h5{
+    padding-left: 1rem;
+    text-transform: uppercase;
+    font-size: clamp(0.3rem, 5vw, 1rem);
+  }
+  h2,h3,h4,h5{
+    font-family: 'Varela Round', sans-serif;
+
+  }
+}
+.game-area {
+  position: relative;
+  margin: auto;
+  width: 30vw;
+  height: 30vw;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.snake-dot{
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: $color1;
+  border: 1px solid white;
+  z-index: 2;
+}
+
+.snake-food{
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: $color2;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.gr-1{background: $color1;}
+.gr-2{background: $color1;}
+.gr-3{background: $color1;}
+
+*{transition: .5s;}
+
+
+
+.container1{
+  margin: auto;
+  max-height: 30vh !important;
+}
+
+.row2{
+  display: flex;
+  justify-content: center;
+}
+.column{
+  margin-top:3rem;
+  padding-left:3rem;
+  &:hover{
+    padding-left:0;
+    .card .txt{
+      margin-left:1rem;
+      h1, p{
+        color:rgba(255,255,255,1);
+        opacity:1;
+      }
+    }
+    a{
+      color:rgba(255,255,255,1);
+      &:after{
+      width: 10%;
+      }
+    }
+  }
+}
+.card{
+  max-height: 30vh !important;
+  padding: 1.7rem 1.2rem;
+  border-radius: 0;
+  color:rgba(0,0,0,1);
+  box-shadow: 0 0 21px rgba(0,0,0,.27);
+  .txt{
+    z-index: 1;
+    h1{
+      font-size:1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    p{
+      font-size:.7rem;
+      letter-spacing: 0rem;
+      margin-top:33px;
+      opacity:0;
+      color:rgba(255,255,255,1);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//MODAL//
+.Modal{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  outline: none!important;
+  h1,h2{
+    color: $color1;
+    text-align: center!important;
+    filter: drop-shadow(0.6rem 0.3rem 0.6rem rgb(0, 0, 0));
+    outline: none!important;
+    background: url(./bg.png);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 20s linear infinite;
+  }
+  h1{
+    font-size: clamp(2rem, 8vw, 6rem);
+  }
+  h2{
+    font-size: clamp(2rem, 8vw, 4rem);  
+  }
+}
+
+@keyframes animate {
+  from{
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+
+}
+
+//BOTTOM SHAPE
+.custom-shape-divider-bottom-1613487760 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-bottom: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-bottom-1613487760 svg {
+  position: relative;
+  display: block;
+  width: calc(254% + 1.3px);
+  height: 374px;
+}
+
+.custom-shape-divider-bottom-1613487760 .shape-fill {
+  fill: #7acaa55d;
+}
+
+/*MEDIA*/
+
+
+@media only screen and (max-width: 750px) {
+  //LOGIN
+  .login .loginContainer .btnContainer {
+    width: 100%;
+    padding: 2rem 0;
+  }button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .login {
+    padding: 0 1rem;
+  }
+  .login .loginContainer {
+    padding: 3rem;
+  }
+  h1{  
+    font-size: 2rem;
+    padding:1rem 0 ;
+  }
+  .login .loginContainer input {
+    font-size: 1rem;
+    padding: 1rem ;
+    margin: 1rem 0;
+  }
+
+  //DICE
+  .dicegame{
+    max-width: 80vw;
+    margin: auto;
+    .dicespan, .result{
+      padding: 2rem 0!important;
+    }
+  }
+ img #userDice{
+    border:1px solid $color1
+  }
+  .score{
+    padding-top: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    .result{
+      padding-top: 1rem!important;
+    }
+    .StarRatings{
+      display: flex;
+      justify-content: left;
+      padding-bottom: 1rem;
+    }
+  }
+
+//JUMP
+
+.jumpgame{
+  max-width: 90vw;
+  button{
+    max-width: 30vw;
+  }
+}
+
+#game{
+  margin-top: 2rem!important;
+  margin: auto!important;
+  width: 290px;
+  height: 200px;
+  border-bottom: 1px solid $color1;
+  margin-bottom: 2rem!important;
+  
+  
+}
+#character{
+  width: 20px;
+  height: 50px;
+  background-color: $color1;
+  position: relative;
+  top: 150px;}
+  .animate{
+      animation: jump 500ms;
+    }
+
+@keyframes jump{
+  0%{top: 150px;}
+  30%{top: 100px;}
+  70%{top: 100px;}
+  100%{top: 150px;}
+}
+#block{
+  width: 20px;
+  height: 20px;
+  background-color: $color2;
+  position: relative;
+  top: 130px;
+  left: 270px;
+  animation:none;
+}
+@keyframes block{
+  0%{left:270px;}
+  100%{left:-20px};
+}
+
+///SNAKE
+
+.snakegame{
+  #warning{
+    display:block
+  }
+  button{
+display: none;
+  }
+
+}
+.game-area {
+display: none;
+}
+
+
+
+
+}

@@ -1,0 +1,44 @@
+audio {
+    height: 10%;
+  }
+  
+  #play-pause-button {
+    font-size: 17px;
+    cursor: pointer;
+    color: #0072ff
+  }
+  
+  .bg-dark {
+    background-color: #2b2d2e!important;
+
+  }
+  p.text-white.d-inline.bg-dark.p-1 {
+    font-size: 0.7rem;
+  }
+  
+  .values {
+    font-size: 0.8rem;
+  }
+  
+  .tx4 {
+    width: auto;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .tx3 {
+    font: 500 22px 'Ubuntu', sans-serif;
+  }
+  
+  
+  .mainColor {
+    background-color: #f7f7f7!important;
+  }

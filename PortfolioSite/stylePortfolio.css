@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap" );
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    background-color: black;
+    font-family: 'Abel', sans-serif;
+    }
+
+/* header */
+.header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    z-index: 1;
+    
+    }
+
+.header a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    background-color: white(0%);
+    display: flex;
+  }
+  
+ 
+  
+  
+  .menu-items {
+  list-style: none;
+  display: flex;
+  float: right;
+  }
+  
+  .menu-items li a{
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    transition: background 0.3s ease-in-out, color;
+    border: 0.1px solid white;
+  }
+  
+  .menu-items li a:hover{
+    background-color:seagreen ;
+    border: 0.1px solid white;
+  
+  }
+
+
+
+
+
+
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.column{
+    flex: 25%;
+}
+
+.column img{
+    padding: 4px;
+    width:100%;
+    vertical-align: middle;
+    filter: grayscale(100%);
+    opacity: 50%;
+    transition: 1.5s ease-out;
+
+}
+
+.column img:hover{
+    filter: grayscale(0%);
+    transition: 0.5s ease-in;
+    opacity: 100%;
+
+}
+
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 800px){
+    .column {
+        flex:50%;
+    }
+    label{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px){
+    .column {
+        flex:100%;
+    }
+
+    .checkbtn{
+        display: block;
+       }
+    header{
+        background-color: seagreen(0%);
+
+        
+    }
+    ul{
+        top: -100%;
+        position: fixed;
+        margin-left: 24%;
+        margin-right: 30%;
+        width:52%;
+        height: auto;
+        background-color: seagreen; 
+        transition: all .5s; 
+        
+    }
+
+  .menu-items{display: list-item;
+
+
+    }
+
+    ul li a{
+        place-content: center;
+        border: 0.1px solid white;
+    }
+
+    a:hover, a.active{
+        background-color: none;        
+        color:black;
+    }
+    #check:checked ~ ul{
+        top:20px;
+    }
+
+}

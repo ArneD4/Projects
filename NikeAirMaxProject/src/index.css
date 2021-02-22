@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+*{
+    font-family: Mukta;
+    margin: 0;
+    color: rgb(41, 41, 41);
+}
+
+.container{
+    width:1400px;
+    margin: auto;
+}
+
+
+
+h1,h2,h3{
+    font-family: 'Permanent Marker', cursive;
+    text-align:center;
+}
+h1{
+    background: linear-gradient(to right, crimson,rgb(251, 255, 192),springgreen);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip:text;
+    color:rgba(0,0,0,1);
+    font-size:3rem;
+    transition: color .2s ease-in-out;
+    padding:1rem;
+    padding-top:1.5rem;
+}
+h1:hover{
+    color:rgba(0,0,0,0);   
+}
+h1::-ms-thumb{
+    color:rgba(0,0,0,0);   
+}
+
+@keyframes rainbow { 
+    0%{background-position:left}
+    50%{background-position:right}
+    100%{background-position:left}
+  }
+
+
+
+/*NAVBAR*/
+
+.navbar{
+    margin: 0px;
+    background-color: rgb(41, 41, 41);
+}
+.navbar:hover{
+    background: linear-gradient(to right, crimson,rgb(251, 255, 192),springgreen);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+}
+.navbar::-ms-thumb{
+    background: linear-gradient(to right, crimson,rgb(251, 255, 192),springgreen);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+.navbar ul li{
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    transition: background 0.3s ease-in-out, color;
+    border: 0.1px solid rgb(212, 212, 212);
+
+}
+.navbar ul li:hover{
+    background-color: rgb(41, 41, 41) ;
+    border: 0.1px solid rgb(212, 212, 212);  
+  }
+.link{
+    text-decoration: none;
+    color:rgb(212, 212, 212);
+}
+
+
+/*BLOG*/
+.blog{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    margin-top: 3rem;
+}
+.blogItem{
+    text-align: center;
+    margin:0.3rem;
+}
+.pin{
+    width: 27rem;
+    height: auto;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+
+.detail{
+    margin-top: 3rem;   
+    margin-bottom: 0;
+}
+#right{
+    background-color:rgba(41, 41, 41, 0.856)  ;
+    height: 250px;
+    width:auto;
+    overflow: auto;
+}
+
+.detailTitle{
+    background: linear-gradient(to right,  crimson,rgb(251, 255, 192),springgreen);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip:text;
+    color:rgb(243, 243, 243);
+    font-size: 2rem;
+    transition: color .2s ease-in-out;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+.detailTitle:hover{
+    color:rgba(0,0,0,0);   
+}
+.detailTitle::-ms-thumb{
+    color:rgba(0,0,0,0);   
+}
+.detailBody{
+    margin: 0 1rem;    
+    padding: 1rem;
+    color:rgb(243, 243, 243);
+    text-align: justify;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+  ::-webkit-scrollbar-track {
+    background:rgb(212, 212, 212);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(182, 182, 182);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(41, 41, 41, 0.856);
+  }
+
+/*Home*/
+
+.gallery{
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery-item{
+
+    padding:1rem;
+    margin: auto;
+    filter: grayscale(100%);
+    opacity: 50%;
+    transition: 1.5s ease-out;
+}
+.gallery-item:hover{
+    filter: grayscale(0%);
+    transition: 0.5s ease-in;
+    opacity: 100%;
+}
+.gallery-item::-ms-thumb{
+    filter: grayscale(0%);
+    transition: 0.5s ease-in;
+    opacity: 100%;
+}
+img{
+    max-width: 200px;
+    height: 250px;
+}
+
+
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+    .container{
+
+        width:auto!important;
+    
+    }
+  }
+
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .container{
+        width:auto!important; 
+    }
+   }
+   
+  
+  @media all and (min-width: 480px) and (max-width: 768px) { 
+    .container{
+        width:auto!important;
+        margin: 3rem;
+    
+    }
+}
+  
+  @media all and (max-width: 480px) {
+    .blog{
+        margin: 1rem!important;
+    }
+    .blogItem{
+        font-size: 15px;
+    }  
+    img{
+        max-width: 90px;
+        height: auto;
+    }
+    .container{
+        width:auto!important;
+        padding: 0!important; 
+        margin: 1rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .row{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #right{
+        height: auto!important;
+    }
+
+    .detailImg{
+        margin: auto!important;
+        max-width: 100%!important;
+        height:auto!important;
+        margin: 0!important;
+        padding:0!important;
+
+    }
+ }

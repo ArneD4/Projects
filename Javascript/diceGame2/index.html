@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="jumbotron jumbotron-fluid m-0 bg-dark text-white">
+          <div class="container">
+              <h1 class="display-3">Dice Game</h1>
+              <p class="lead">Roll the highest number to win.</p>
+              <hr class="my-2">
+              <br>
+              <button class="text-center align-center" onclick="rollDice()">Roll Dices</button>
+              <br><br>
+              <hr class="my-2">
+              <br>
+              <div class="text-white text-center display-4" id="result">Are you ready?</div>
+              <h5>Results:</h5>
+              <div id="gameCount">Number of games played: </div>
+              <div id="count1">Player 1 score:</div>
+              <div id="count2">Player 2 score:</div>
+          </div>
+      </div>
+      <div class="row-">
+          <div class="col-fluid">
+              <div class="col-6 bg-warning text-center m-0 p-3 float-left">
+                  <h4>Player 1</h4>
+                    <img id="dice1" src="Alea_1.png" alt="" >
+              </div>
+              <div class="col-6 bg-success text-center m-0 p-3 float-right">
+                <h4>Player 2</h4>
+                    <img id="dice2" src="Alea_1.png" alt="" >
+              </div>
+              
+          </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <script src="app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

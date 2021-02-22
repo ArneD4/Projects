@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+*{
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+}
+
+body{
+ padding: 3rem 0;
+ max-width: 650px;
+ margin: auto;
+}
+.row{
+background-color: rgb(41, 41, 41);
+border-radius: 0.9rem;
+}
+
+
+.top{
+background-color: tomato;
+color: white;
+border-top-left-radius: 0.9rem;
+border-top-right-radius: 0.9rem;
+padding:2rem 2rem 0.6rem;
+}
+h1{
+    font-size: 2rem;
+}
+.socials{
+    text-align: center;
+    padding-top: 1rem;
+}
+.socials i{
+    padding: 1rem;
+    color: white;
+    border: 1px solid white;
+    min-width: 4rem;
+    margin: 0 0.3rem;
+    border-radius: 60rem;
+}
+.socials i:hover{
+
+    color: tomato;
+    border: 1px solid tomato;
+
+}
+
+.col-sm-6, .col-sm-12{
+    padding:0 2rem;
+    margin: auto;
+}
+.col-sm-6 input, .col-sm-6 select{
+border-radius: 2rem;
+}
+
+button{
+background-color: tomato!important;
+float:right;
+margin-bottom: 2rem!important;
+border-radius: 2rem!important;
+border: 0!important;
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+
+@media only screen and (min-width: 600px) {
+    
+}
+
+
+@media only screen and (min-width: 768px) {
+    
+}
+
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+
+@media only screen and (min-width: 1200px) {
+    
+}

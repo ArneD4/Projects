@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <title>Todo List</title>
+  </head>
+  <body>
+
+    <div class="container-fluid text-center m-0 p-0">
+        <div class="row-fluid bg-primary">
+            <div class="col">
+                <br>
+                <H3>TO DO LIST</H3>
+            </div>
+            <div class="col">
+             <form action="">
+                 <label for="todoInput">Write a new to do here:</label>
+                 <br>
+                 <input id="todoInput" placeholder="New To Do" type="text">
+                 <input type="submit" id="addTodo" value="Add To Do">
+             </form>
+             <br>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 bg-light p-4"> 
+                <h5 class="card-title" id="tasks-title">Todos</h5>               
+                <ul class="list-group">               
+                </ul>
+            </div>
+            <div class="col-md-4 bg-dark text-light p-4">                
+                <h5 class="card-title" id="tasks-title">Search To Do</h5> 
+                <form action="">
+                    <input type="text" placeholder="Search a To Do" id="filter">
+                    <input type="submit" value="Search" id="search">
+                    <input type="submit" value="Clear Search" id="clear">
+                </form>
+                <br>
+                <h5 class="card-title" id="tasks-title">Remove all To Dos</h5> 
+                <form action="">
+                    <input type="submit" value="Remove All" id="delete">
+                </form>
+                <br>
+                <h5 class="card-title" id="tasks-title">To Do Counter</h5> 
+                <div class="col-fluid" >
+                <p id="counter">Amount of To Dos:</p>
+                <p id="done">Amount of Finnished To Dos:</p>
+            </div>
+            </div>
+            </div>
+    </div>
+      
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+  </body>
+</html>
