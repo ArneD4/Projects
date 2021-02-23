@@ -16,9 +16,6 @@ const JumpGame = () => {
 
 
 
-
-
-
     const startGame = () => {
         audio2.play();
         setInterval(function () {
@@ -58,6 +55,7 @@ const JumpGame = () => {
             character.classList.add("animate")
         }
         setTimeout(function () {
+            // audio.play()
             character.classList.remove("animate")
         }, 500)
 
@@ -74,7 +72,7 @@ const JumpGame = () => {
                 <h3><span>{countDown}</span></h3>
                 <h5>Score: {score}</h5>
             </div>
-            <div id="game" onClick={() => { jump(); audio.play()}}>
+            <div id="game" onClick={() => { jump(); }}>
                 <div id="character"></div>
                 <div id="block"></div>
             </div>

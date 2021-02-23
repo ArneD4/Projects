@@ -340,15 +340,12 @@ button {
 
 
 
-.gr-1{background: $color1;}
-.gr-2{background: $color1;}
-.gr-3{background: $color1;}
-
-*{transition: .5s;}
-
-
+.gr-1{background-color: $color1;}
+.gr-2{background-color: $color1;}
+.gr-3{background-color: $color1;}
 
 .container1{
+  transition: .5s;
   margin: auto;
   max-height: 30vh !important;
 }
