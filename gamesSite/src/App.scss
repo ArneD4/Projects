@@ -18,7 +18,7 @@ button {
   outline: none;
   background: $color1;
   color:$color2;
-  float:right;
+
   margin-bottom: 2rem!important;
   border-radius: 2rem!important;
   border: 0!important;
@@ -107,32 +107,143 @@ button {
 .hero {
   width: 100%;
   bottom: 0;
-  background: $color1;
+  background-color: $color2;
   background: linear-gradient(168deg, r$color1 0%, rgba(201,161,65,1) 97%);
 }
 
-.hero nav {
-  background: $color1;
-  width: 100%;
-  padding: 20px 40px;
+.hero nav{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.287));
+  padding: 0 1rem;
+  margin: auto;
+  img{
+    color: white;
+    height: 4rem;
+  }
+  .logout{
+    background: 0!important;
+    margin: 0!important;
+    width: auto!important;
+    color: white;
+    font-size: clamp(0.6rem, 0.9rem, 1.2rem);
+    border-radius: 0!important;
+    padding: 1rem!important;
+    text-transform: uppercase;
+    &:hover{
+      color: red;
+      background-color: black!important;
+    }
+  }
+  ul{
+    display: flex;
+    justify-content: left;
+    margin:auto;
+    width: 90vw;
+    a{
+      display: borderbox;
+      color:white;
+      font-size: clamp(0.6rem, 0.9rem, 1.2rem);
+      letter-spacing: 0.1rem;
+      text-decoration: none;
+      padding: 1rem!important;
+      margin: 0.6rem!important;
+      border: 1px solid white;
+      border-radius: 1rem;
+      &:hover{
+        color: $color1;
+        border: 1px solid $color1;
+      }
+    }
+  }
+}
+.hamburger{
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 1rem;
+  color: $color1;
+  cursor: pointer;
+  display: none;
+  border: none!important;
 }
 
-.hero nav h2 {
-  color: #fff;
+//  .hero nav ul {
+//   background: $color2;
+  
+//   filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.287));
+// }
+
+// .hero nav ul a {
+//   display: flex;
+//   flex: column;
+//   align-items: center;
+//   justify-content: space-between;
+//   color: #fff;
+//   text-decoration: none!important;
+// }
+// .hero nav ul a:hover {
+//   color: red;
+// }
+
+
+// .hero nav ul button {
+//   float: right;
+//   color: white;
+//   max-width: 10vw;
+//   background: $color2;
+//   padding: auto!important;
+//   margin:1rem!important;
+// }
+
+
+
+
+
+///MAIN MENU
+.container1{
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+
+  .col-md-3{
+    overflow: hidden;
+    margin: auto;
+    background-color: $color1;
+    display: flex;
+    padding: 1rem;
+    border-radius: 1rem;
+    padding-left: 3rem;
+    a{
+      color:rgba(255,255,255,1);
+      opacity: .2;
+      text-decoration: none!important;
+    }
+    &:hover{
+      transition: 0.5s;
+      padding-left:1rem;
+      a{
+        color: white;
+        opacity: 1;
+      }
+      }
+  }
+  .ico{
+    position: relative;
+    font-size: 12rem;
+    line-height: 0;
+    color:rgba(255,255,255,1);
+    z-index: 0;
+   }
 }
 
-.hero nav button {
-  width: 86px;
-  padding: 8px 0;
-  background: $color1;
-}
+
+
+
+
+
 
 /*DICEGAME*/
-
 .dicegame{
   padding-top: 6rem;
   max-width: 60vw;
@@ -331,91 +442,6 @@ button {
 }
 
 
-
-
-
-
-
-
-
-
-
-.gr-1{background-color: $color1;}
-.gr-2{background-color: $color1;}
-.gr-3{background-color: $color1;}
-
-.container1{
-  transition: .5s;
-  margin: auto;
-  max-height: 30vh !important;
-}
-
-.row2{
-  display: flex;
-  justify-content: center;
-}
-.column{
-  margin-top:3rem;
-  padding-left:3rem;
-  &:hover{
-    padding-left:0;
-    .card .txt{
-      margin-left:1rem;
-      h1, p{
-        color:rgba(255,255,255,1);
-        opacity:1;
-      }
-    }
-    a{
-      color:rgba(255,255,255,1);
-      &:after{
-      width: 10%;
-      }
-    }
-  }
-}
-.card{
-  max-height: 30vh !important;
-  padding: 1.7rem 1.2rem;
-  border-radius: 0;
-  color:rgba(0,0,0,1);
-  box-shadow: 0 0 21px rgba(0,0,0,.27);
-  .txt{
-    z-index: 1;
-    h1{
-      font-size:1.5rem;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
-    p{
-      font-size:.7rem;
-      letter-spacing: 0rem;
-      margin-top:33px;
-      opacity:0;
-      color:rgba(255,255,255,1);
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //MODAL//
 .Modal{
   position: absolute;
@@ -480,10 +506,13 @@ button {
   fill: #7acaa55d;
 }
 
+
+
+
+
 /*MEDIA*/
-
-
 @media only screen and (max-width: 750px) {
+
   //LOGIN
   .login .loginContainer .btnContainer {
     width: 100%;
@@ -507,6 +536,30 @@ button {
     padding: 1rem ;
     margin: 1rem 0;
   }
+
+  //nav
+  .hero nav{
+    background-color: $color2;
+    width: 100%;
+    ul{
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+    ul.show{
+      display:flex;
+    }
+  }
+
+
+  .hamburger{
+    display:block;
+    border: 0!important;
+    width: 10vw;
+    padding-right: 3rem;
+    margin: 0!important;
+  }
+
 
   //DICE
   .dicegame{
@@ -534,14 +587,12 @@ button {
   }
 
 //JUMP
-
 .jumpgame{
   max-width: 90vw;
   button{
     max-width: 30vw;
   }
 }
-
 #game{
   margin-top: 2rem!important;
   margin: auto!important;
@@ -549,8 +600,6 @@ button {
   height: 200px;
   border-bottom: 1px solid $color1;
   margin-bottom: 2rem!important;
-  
-  
 }
 #character{
   width: 20px;
@@ -583,7 +632,6 @@ button {
 }
 
 ///SNAKE
-
 .snakegame{
   #warning{
     display:block
@@ -596,8 +644,4 @@ display: none;
 .game-area {
 display: none;
 }
-
-
-
-
 }

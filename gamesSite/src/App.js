@@ -14,6 +14,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import NavBar from "./NavBar";
 
 
 
@@ -110,6 +111,8 @@ function App() {
        <Hero handleLogout={handleLogout}>
     <Route path = "/" exact component={Hero}/>
        </Hero>
+
+
        
       ):(
         <Login
@@ -126,6 +129,8 @@ function App() {
         /> 
       )}
     </div>
+
+
 
 
     <Route path = "/DiceGame" component={DiceGame}/>

@@ -51,6 +51,7 @@ const JumpGame = () => {
     }
 
     const jump = () => {
+        character = document.getElementById("character");
         if (character.classList != "animate") {
             character.classList.add("animate")
         }
