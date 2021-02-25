@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import fire from './fire'
 import Login from './Login'
 import Hero from './Hero'
@@ -7,14 +7,14 @@ import './App.scss';
 import DiceGame from './components/DiceGame'
 import JumpGame from './components/JumpGame'
 import SnakeGame from "./components/SnakeGame";
+import HomeMenu from './menu';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import NavBar from "./NavBar";
+
 
 
 
@@ -22,7 +22,7 @@ import NavBar from "./NavBar";
 
 function App() {
   const [user, setUser] = useState('');
-  const [email,setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
@@ -35,68 +35,68 @@ function App() {
     setPassword('');
   }
 
-  const clearErrors = () =>{
+  const clearErrors = () => {
     setEmailError('');
     setPasswordError('');
   }
 
 
-  const handleLogin = () =>{
-      clearErrors();
-      fire  
+  const handleLogin = () => {
+    clearErrors();
+    fire
       .auth()
-      .signInWithEmailAndPassword(email,password)
-      .catch(err =>{
-        switch(err.code){
+      .signInWithEmailAndPassword(email, password)
+      .catch(err => {
+        switch (err.code) {
           case "auth/invalid-email":
           case "auth/user-disabled":
-            case "auth/user-not-found":
-              setEmailError(err.message);
-              break;
-              case "auth/wrong-password":
-                break;
+          case "auth/user-not-found":
+            setEmailError(err.message);
+            break;
+          case "auth/wrong-password":
+            break;
         }
       })
   };
 
 
-  const handleSignup = () =>{
+  const handleSignup = () => {
     clearErrors();
     fire
-    .auth()
-    .createUserWithEmailAndPassword(email,password)
-    .catch(err =>{
-      switch(err.code){
-        case "auth/email-already-in-use":
-        case "auth/invalid-email":
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch(err => {
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
           case "auth/user-not-found":
             setPasswordError(err.message);
             break;
-            case "auth/weak-password":
-              break;
-      }
-    })
+          case "auth/weak-password":
+            break;
+        }
+      })
   };
 
 
-  const handleLogout = () =>{
+  const handleLogout = () => {
     fire.auth().signOut();
   }
 
 
   const authListener = () => {
-    fire.auth().onAuthStateChanged((user)=>{
+    fire.auth().onAuthStateChanged((user) => {
       if (user) {
         clearInputs();
         setUser(user);
-      }else{
+      } else {
         setUser("")
       }
     })
   };
 
 
-  useEffect(()=>{
+  useEffect(() => {
     authListener();
   }, [])
 
@@ -105,38 +105,42 @@ function App() {
 
 
   return (
-<Router>
-    <div className="App">
-      {user ? (
-       <Hero handleLogout={handleLogout}>
-    <Route path = "/" exact component={Hero}/>
-       </Hero>
-
-
-       
-      ):(
-        <Login
-        email={email} 
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        handleLogin={handleLogin}
-        handleSignup={handleSignup}
-        hasAccount={hasAccount}
-        setHasAccount={setHasAccount}
-        emailError={emailError}
-        passwordError={passwordError}
-        /> 
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        {user ? (
+          <Hero handleLogout={handleLogout}>
+            <Route path="/" exact component={Hero} />
+          </Hero>
 
 
 
 
-    <Route path = "/DiceGame" component={DiceGame}/>
-    <Route path = "/JumpGame" component={JumpGame}/>
-    <Route path = "/SnakeGame" component={SnakeGame}/>
-  </Router>
+        ) : (
+            <Login
+              email={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              handleLogin={handleLogin}
+              handleSignup={handleSignup}
+              hasAccount={hasAccount}
+              setHasAccount={setHasAccount}
+              emailError={emailError}
+              passwordError={passwordError}
+            />
+          )}
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <HomeMenu />
+        </Route>
+      </Switch>
+
+      <Route path="/menu" component={HomeMenu} />
+      <Route path="/DiceGame" component={DiceGame} />
+      <Route path="/JumpGame" component={JumpGame} />
+      <Route path="/SnakeGame" component={SnakeGame} />
+    </Router>
   );
 }
 

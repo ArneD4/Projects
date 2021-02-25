@@ -16,7 +16,7 @@ const NavBar = ({ handleLogout }) => {
 
     return (
         <nav>
-            <Link to="/"><img src="favicon.ico" alt="" /></Link>
+            <Link exact to="/"><img src="favicon.ico" alt="" /></Link>
             <button className="hamburger" id="hamburger" onClick={showlist}><FaBars /></button>
             <ul id="nav-ul">
                 <Link to="/DiceGame">Dice Game</Link>

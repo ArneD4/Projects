@@ -31,9 +31,9 @@ const JumpGame = () => {
         setTimeout(function () {
             (document.getElementById("block")).style.animation = " block 1s infinite";
             const checkDead = setInterval(function () {
-                var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-                var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-                if (blockLeft < 20 && blockLeft > 0 && characterTop >= 130) {
+                // var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+                // var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+                if ((parseInt(window.getComputedStyle(block).getPropertyValue("left"))) < 20 && (parseInt(window.getComputedStyle(block).getPropertyValue("left"))) > 0 && (parseInt(window.getComputedStyle(character).getPropertyValue("top"))) >= 130) {
                     setModalIsOpen(true);
                     block.style.animation = "none";
                     audio3.play();

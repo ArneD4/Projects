@@ -131,6 +131,8 @@ button {
     border-radius: 0!important;
     padding: 1rem!important;
     text-transform: uppercase;
+    text-align: center;
+    float: right;
     &:hover{
       color: red;
       background-color: black!important;
@@ -559,6 +561,33 @@ button {
     padding-right: 3rem;
     margin: 0!important;
   }
+
+
+
+  //mainmenu
+
+  .container1{
+    margin-top: 2rem!important;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  
+    .col-md-3{
+      max-width: 60vw;
+      max-height: 60vw;
+      margin: 1rem auto!important;
+      h1{
+font-size: 1.6rem!important;
+text-align: center;
+      }
+
+    }
+    .ico{
+      font-size: 6rem;
+     }
+  }
+
+
 
 
   //DICE
