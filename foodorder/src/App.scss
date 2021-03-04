@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+$color1: #ffb327;
+$color2: #fff7e9;
+$color3: #505050;
+
+$myFont: 'Hammersmith One', sans-serif;
+$myFont2: 'Montserrat', sans-serif;
+
+*{
+    margin:0 ;
+    font-family: $myFont;
+    letter-spacing: 0.1rem;
+}
+
+
+
+
+//NAVBAR
+
+.navbar {
+    z-index: 1;
+    padding: 0.9rem;
+    display: flex;
+    align-items: center;
+    margin:  auto;
+    border-bottom: 1px solid $color2;
+    position: fixed;
+    background-color: $color2;
+    width: 100%;
+    .icon{
+        display: flex;
+        justify-content: center;
+        padding-right: 0.3rem;
+        color:$color1;
+    }
+  }
+  .navbar h1 {
+    color:$color1;
+  }
+  .navbar .links {
+    margin-left:auto;
+    margin-right: 0.3rem;
+  }
+  .navbar a {
+      text-align: center;
+    margin-left: 0.6rem;
+    text-decoration: none;
+    padding: 0.9rem;
+    padding-right: 2rem;
+  }
+  .navbar a:hover {
+    color: $color1;
+  }
+//TOP
+
+
+
+.top{
+    padding-top: 6rem;
+    width: 75vw;
+    margin: auto;
+}
+
+//RESTAURANT INFO
+.rest{
+    .row{
+        border-bottom: 1px solid $color3;
+        display: flex;
+        justify-content: space-between; 
+        margin-bottom: 3rem;    
+        }    
+    .info{
+        padding: 1rem;
+        padding-left: 0;
+        color: $color3;
+        h1{
+            margin-bottom: 1rem;
+        } 
+        .extra{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            max-width: 27vw;
+            p{
+                
+                font-family: $myFont2!important;
+                font-size: 0.9rem;
+                
+            } 
+        }
+        button{
+            color: $color2;
+            background-color: $color1;
+            border-style: none;
+            border-radius: 2rem;
+            padding:1rem;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $color3;
+            }
+        }
+    }   
+    .image{    
+        color: $color3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        max-width: 30vw;    
+        img{
+       
+            max-width: 100%;  
+        }
+        span{
+            margin: 0.6rem 0;
+            display: flex;
+            flex-direction: row;
+            
+            .icon{
+                display: flex;
+                align-items: center;
+                padding-right: 0.3rem;
+            }
+            p{
+                font-family: $myFont2!important;
+                margin-left: 0.6rem;
+            }
+        }
+       
+    }
+}
+
+//MAIN
+
+.main{
+    display: flex;
+    flex-direction: row-reverse;
+    ///MENU LIST
+    .menulist{
+        
+        max-width: 45vw;
+        .ctg{
+            padding: 1rem;
+            h2{
+                padding: 1rem;
+                color:$color1;
+                background-color: $color2;
+                
+            }
+            .item{
+                font-style: none;
+                border: 1px solid $color3;
+                display: -ms-flexbox;
+                padding:0.3rem;
+                margin: 0.3rem 0!important;
+                .price{
+                    color:$color1;
+                }
+                .desc{
+                    font-size: 0.9rem;
+                }
+                button{
+                    color: $color2;
+                    background-color: $color1;
+                    border:none;
+                    border-radius: 0.3rem;
+                }
+            }
+            
+        }
+    }
+
+    //OPENINGHOURS
+    .openinghours{
+        margin:  1rem 0;
+        padding: 1rem;
+        width: 30vw;
+        height: 100%;
+        background-color: $color2;
+        color: $color3;
+        h4{
+            text-align: center;
+            margin-bottom: 1.2rem;
+            font-family: $myFont2!important;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $color3;
+        }
+        span{
+            display: flex;
+            padding: 0.3rem 2rem;
+            h5{
+                font-family: $myFont2!important;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            p{
+                margin-left: auto;
+                font-family: $myFont2!important;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
+
+
+    
+
+
+
+
+
+
+
+
