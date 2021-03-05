@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { isValidElement, useEffect, useState } from "react";
+import Basket from "./components/Basket";
 import Info from "./components/Info";
 import MenuList from "./components/MenuList";
-import menuNav from "./components/menuNav"
 import OpeningHours from "./components/OpeningHours";
 
 
@@ -18,14 +18,32 @@ const Home = () => {
       })
   }, [])
 
+
+  const [basketItem, setBasketItem] = useState([])
+
+  const addItem = (e) => {
+      const dish = e.target.parentElement.firstChild.innerHTML;
+      const price = e.target.parentElement.children[1].innerHTML;
+      const newItem = { dish: dish, price: price };
+      basketItem.push(newItem)
+      setBasketItem(basketItem)
+
+  }
+
+  
+
   return (
     <div className="home">
       <div className="top">
         {menu && <Info menu={menu} />}
-        {menu && <menuNav menu={menu} />}
         <div className="main"> 
-        {menu && <OpeningHours menu={menu} />}
-        {menu && <MenuList menu={menu} />}
+        
+        
+        {menu && <MenuList addItem={addItem} menu={menu} />}
+        <div className="right">
+        {menu && <Basket basketItem={basketItem}/> }
+        {menu && <OpeningHours menu={menu} />}  
+        </div>
         </div>
       </div>
       

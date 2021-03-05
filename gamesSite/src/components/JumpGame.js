@@ -1,4 +1,5 @@
-import { useState, clearState } from "react";
+
+import { useState, clearState, useRef } from "react";
 import Modal, { setAppElement } from 'react-modal'
 import { Container } from 'reactstrap';
 
@@ -6,14 +7,18 @@ const JumpGame = () => {
     var audio = new Audio('http://www.superluigibros.com/downloads/sounds/SNES/SMK/wav/jump.wav');
     var audio2 = new Audio('http://web.mit.edu/GRAPHICS/src/tuxpaint-0.9.12/data/sounds/bleep.wav');
     var audio3 = new Audio('http://www.mario-museum.net/sons/smb_gameover.wav');
-    var character = document.getElementById("character");
-    var block = document.getElementById("block");
+    const character = useRef();
+    const block = useRef();
+
+
     let timeLeft = 3;
     var userScore = 0;
     const [countDown, setCountdown] = useState(timeLeft);
     const [score, setScore] = useState(userScore);
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
+
+    
 
 
     const startGame = () => {
@@ -29,16 +34,19 @@ const JumpGame = () => {
         }, 1000)
 
         setTimeout(function () {
-            (document.getElementById("block")).style.animation = " block 1s infinite";
+
+            block.current.style.animation = " block 1s infinite";
             const checkDead = setInterval(function () {
-                // var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-                // var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-                if ((parseInt(window.getComputedStyle(block).getPropertyValue("left"))) < 20 && (parseInt(window.getComputedStyle(block).getPropertyValue("left"))) > 0 && (parseInt(window.getComputedStyle(character).getPropertyValue("top"))) >= 130) {
+
+                const characterTop = parseInt(window.getComputedStyle(character.current).getPropertyValue("top"));
+                const blockLeft = parseInt(window.getComputedStyle(block.current).getPropertyValue("left"));
+               
+                if (blockLeft < 20 && blockLeft > 0 && characterTop >= 130) {
                     setModalIsOpen(true);
-                    block.style.animation = "none";
+                    block.current.style.animation = "none";
                     audio3.play();
                     clearInterval(checkDead)
-                }else if(character === null || block === null){
+                }else if(character.current === null || block.current === null){
                     return
                 }
                 else{
@@ -51,13 +59,13 @@ const JumpGame = () => {
     }
 
     const jump = () => {
-        character = document.getElementById("character");
-        if (character.classList != "animate") {
-            character.classList.add("animate")
+        
+        if (character.current.classList != "animate") {
+            character.current.classList.add("animate")
         }
         setTimeout(function () {
             // audio.play()
-            character.classList.remove("animate")
+            character.current.classList.remove("animate")
         }, 500)
 
     }
@@ -74,8 +82,8 @@ const JumpGame = () => {
                 <h5>Score: {score}</h5>
             </div>
             <div id="game" onClick={() => { jump(); }}>
-                <div id="character"></div>
-                <div id="block"></div>
+                <div ref={character} id="character"></div>
+                <div ref={block} id="block"></div>
             </div>
             <Container id="mod">
                 <Modal className="Modal" ariaHideApp={false} isOpen={modalIsOpen} onRequestClose={() => { setModalIsOpen(false); timeLeft = 3; setCountdown(timeLeft); setScore(0) }}>
