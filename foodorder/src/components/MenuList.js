@@ -47,7 +47,7 @@ const MenuList = ({ products }) => {
             </div>
             <div className="right">
                 <div className="basket">
-                     
+
                 </div>
                 <OpeningHours products={products} />
             </div>
