@@ -7,7 +7,7 @@ const MenuList = ({ products }) => {
     const [basketItem, setBasketItem] = useState([])
     const [check, setCheck] = useState(false)
     let cart = '';
-    const basketDiv = document.getElementById('cart')
+    
 
     const addToCart = (e) => {
         setCheck(false)
@@ -18,11 +18,12 @@ const MenuList = ({ products }) => {
         setBasketItem(basketItem)
         setCheck(true)
         console.log(basketItem)
+        document.querySelectorAll('basket').innerHTML = basketItem.map((item, idx) => (
+         <div className="innerCart" key={idx}>
+             <p>{item.dish}</p>                          
+         </div> ))
     }
 
-    const createCart = () => {
-
-    }
 
 
 
@@ -46,11 +47,7 @@ const MenuList = ({ products }) => {
             </div>
             <div className="right">
                 <div className="basket">
-                        {check === true && basketItem.map((item, idx) => (
-                            <div className="innerCart" key={idx}>
-                                <p>{item.dish}</p>                          
-                            </div>
-                        ))}
+                     
                 </div>
                 <OpeningHours products={products} />
             </div>
