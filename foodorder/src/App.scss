@@ -147,6 +147,7 @@ $myFont2: 'Montserrat', sans-serif;
             padding-left: 0!important;
             h2{
                 padding: 1rem;
+                margin-bottom: 1rem;
                 color:$color1;
                 background-color: $color2;
                 
@@ -157,6 +158,7 @@ $myFont2: 'Montserrat', sans-serif;
                 display: -ms-flexbox;
                 padding:0.3rem;
                 margin: 0.3rem 0!important;
+                color: $color3;
                 .price{
                     color:$color1;
                 }
@@ -208,10 +210,31 @@ $myFont2: 'Montserrat', sans-serif;
     .basket{
         text-align: center;
         margin:  1rem 0;
-        padding: 2rem 1rem;
+        padding: 1rem;
         width: 30vw;
         background-color: $color2;
         color: $color3;
+        h2{
+            color: $color1;
+        }
+        .innerCart{
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            p{
+                font-size: 1rem!important;
+            }
+            i{
+                background-color: transparent;
+                border-style: none;
+                color: $color1;
+
+
+                
+                
+            }
+        }
     }
 }
 
