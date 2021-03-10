@@ -1,21 +1,30 @@
 import React from 'react'
+import {  useState } from "react";
 import { FaTimesCircle } from "react-icons/fa"
-export default function Basket({ basketItem, totalPrice }, setTotal) {
+
+export default function Basket({ basketItem, }) {
+
+    let itemPrice = 0;
+    let totalPrice = 0;
+
+
+
+    const newTotal = (price) => {
+        totalPrice = totalPrice + Number(price.substring(1))
+    }
     
     const removeItem = (e) => {
         if (e.target.parentElement.className === 'remove') {
-            console.log(e.target.parentElement.parentElement.children[1].innerHTML)
             let priceDeleted = e.target.parentElement.parentElement.children[1].innerHTML
             let currentTotal = totalPrice
             priceDeleted = Number(priceDeleted.substring(1))
             currentTotal = currentTotal - priceDeleted
-            console.log(currentTotal)
             totalPrice = currentTotal
-            e.target.parentElement.parentElement.remove()       
+            e.target.parentElement.parentElement.remove()     
+            console.log('after delete',totalPrice)
             return totalPrice
         }
     }
-
 
 
     return (
@@ -29,6 +38,7 @@ export default function Basket({ basketItem, totalPrice }, setTotal) {
                         <div className="innerCart" key={idx}>
                             <p id="dish">{item.dish}</p>
                             <p id="price">{item.price}</p>
+                            {newTotal(item.price)}
                             <i className="remove" onClick={removeItem}><FaTimesCircle /></i>
                         </div>))
                 }

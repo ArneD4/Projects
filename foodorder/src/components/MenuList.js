@@ -8,16 +8,18 @@ const MenuList = ({ products }) => {
     let menuItems = products['categorys']
     const [basketItem, setBasketItem] = useState([])
     const [, setCheck] = useState(false)
-    let [totalPrice, setTotalPrice] = useState(0)
+    
 
     const addToCart = (e) => {
         setCheck(false)
         const dish = e.target.parentElement.firstChild.innerHTML;
         const price = e.target.parentElement.children[1].innerHTML;
         const newItem = { dish: dish, price: price };
-        let itemPrice = Number(price.substring(1))
-        let total = totalPrice + itemPrice
-        setTotalPrice(total)
+
+        // let itemPrice = Number(price.substring(1))
+        // let total = totalPrice + itemPrice
+        // setTotalPrice(total)
+
         basketItem.push(newItem)
         setBasketItem([...basketItem])
         setCheck(true)
@@ -26,9 +28,6 @@ const MenuList = ({ products }) => {
 
 
 
-    const setTotal = (totalprice) => {
-        setTotalPrice(totalprice)
-    }
 
     return (
         <Container className="main">
@@ -48,7 +47,7 @@ const MenuList = ({ products }) => {
                 ))}
             </div>
             <div className="right">
-                <Basket basketItem={basketItem} totalPrice={totalPrice} setTotal={setTotal}/>
+                <Basket basketItem={basketItem} />
                 <OpeningHours products={products} />
             </div>
         </Container>
