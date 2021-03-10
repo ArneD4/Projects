@@ -5,14 +5,14 @@ import { FaTimesCircle } from "react-icons/fa"
 export default function Basket({ basketItem, }) {
 
     let itemPrice = 0;
-    let totalPrice = 0;
+    let [totalPrice ,setTotalPrice] = useState(0)
 
 
 
     const newTotal = (price) => {
         totalPrice = totalPrice + Number(price.substring(1))
     }
-    
+
     const removeItem = (e) => {
         if (e.target.parentElement.className === 'remove') {
             let priceDeleted = e.target.parentElement.parentElement.children[1].innerHTML
@@ -22,7 +22,7 @@ export default function Basket({ basketItem, }) {
             totalPrice = currentTotal
             e.target.parentElement.parentElement.remove()     
             console.log('after delete',totalPrice)
-            return totalPrice
+            setTotalPrice(totalPrice)
         }
     }
 
